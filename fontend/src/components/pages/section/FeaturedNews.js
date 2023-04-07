@@ -1,29 +1,12 @@
-import "./FeaturedNews.scss";
+import styles from "../section/FeaturedNews.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import featurednews from '../../../assets/FeaturedNewImg/bonhiem.jpg'
+import classNames from "classnames/bind";
+const cx = classNames.bind(styles);
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    />
-  );
-}
 
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
-      onClick={onClick}
-    />
-  );
-}
 
 const FeaturedNews = () => {
   let settings = {
@@ -32,34 +15,45 @@ const FeaturedNews = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    // nextArrow: <SampleNextArrow/>,
-    // prevArrow: <SamplePrevArrow/>,
   };
 
   return (
-    <div className="section-featurednews">
-      <div className="featurednews-content">
+    <div className= {cx("section-share section-featurednews")}>
+      <div className= {cx("section-container")}>
+        <div className= {cx("section-header")}>
+          <span className={cx("title-section")}>Tin tức nổi bật</span>
+          <button className={cx("btn-section")}>Xem thêm</button>
+        </div>
+        <div className= {cx("section-body")}>
+
         <Slider {...settings}>
-          <div className="img-custom">
-            <h3>1</h3>
+          <div className= {cx("featurednews-customize")}>
+            <div className="bg-image section-featurednews" />
+            <div>Giải thưởng 1</div>
           </div>
-          <div className="img-custom">
-            <h3>2</h3>
+          <div className= {cx("featurednews-customize")}>
+            <div className="bg-image section-featurednews" />
+            <div>Giải thưởng 2</div>
           </div>
-          <div className="img-custom">
-            <h3>3</h3>
+          <div className= {cx("featurednews-customize")}>
+            <div className="bg-image section-featurednews" />
+            <div>Giải thưởng 3</div>
           </div>
-          <div className="img-custom">
-            <h3>4</h3>
+          <div className= {cx("featurednews-customize")}>
+            <div className="bg-image section-featurednews" />
+            <div>Giải thưởng 4</div>
           </div>
-          <div className="img-custom">
-            <h3>5</h3>
+          <div className= {cx("featurednews-customize")}>
+            <div className="bg-image section-featurednews" />
+            <div>Giải thưởng 5</div>
           </div>
-          <div className="img-custom">
-            <h3>6</h3>
+          <div className= {cx("featurednews-customize")}>
+            <div className="bg-image section-featurednews" />
+            <div>Giải thưởng 6</div>
           </div>
           
         </Slider>
+        </div>
       </div>
     </div>
   );

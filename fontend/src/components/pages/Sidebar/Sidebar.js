@@ -72,7 +72,6 @@ function Sidebar({ children }) {
           </div>
         </div>
         {sidebarlist.map((item, index) => {
-          console.log("x", item[index - 1]);
           if (sidebarlist.length - 1 === index) {
             return (
               <NavLink
